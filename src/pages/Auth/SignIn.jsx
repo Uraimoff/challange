@@ -1,24 +1,24 @@
 import React from "react";
 import { Button, Checkbox, Form, Input } from "antd";
-import "./Auth.scss"
+import "./Auth.scss";
+import { NavLink } from "react-router-dom";
 export default function SignIn() {
   const onFinish = (values) => {
     console.log("Success:", values);
   };
+
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
   return (
     <div className="sign-in auth">
+      <h1 className="title">Login</h1>
       <Form
+        layout="vertical"
         name="basic"
         labelCol={{
-          span: 7,
-        }}
-        wrapperCol={{
           span: 10,
         }}
-
         initialValues={{
           remember: false,
         }}
@@ -27,16 +27,16 @@ export default function SignIn() {
         autoComplete="off"
       >
         <Form.Item
-          label="Username"
-          name="username"
+          label="Email"
+          name="email"
           rules={[
             {
               required: true,
-              message: "Please input your username!",
+              message: "Please, enter your email adress!",
             },
           ]}
         >
-          <Input type="email" />
+          <Input type="email" placeholder="Enter your email adress..." />
         </Form.Item>
 
         <Form.Item
@@ -45,34 +45,25 @@ export default function SignIn() {
           rules={[
             {
               required: true,
-              message: "Please input your password!",
+              message: "Please enter your password!",
             },
           ]}
         >
-          <Input.Password />
+          <Input.Password placeholder="Enter your password..." />
         </Form.Item>
 
-        <Form.Item
-          name="remember"
-          valuePropName="checked"
-          wrapperCol={{
-            offset: 8,
-            span: 16,
-          }}
-        >
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
+        <Checkbox style={
+          {marginBottom: "20px"}
+        }>Remember me</Checkbox>
 
-        <Form.Item
-          wrapperCol={{
-            offset: 8,
-            span: 16,
-          }}
-        >
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
+        <Button type="primary" htmlType="submit">
+          Login
+        </Button>
+
+        <p className="link-text">
+          Have you not registered yet?{" "}
+          <NavLink to={"/register"}>Register</NavLink>
+        </p>
       </Form>
     </div>
   );

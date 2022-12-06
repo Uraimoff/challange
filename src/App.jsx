@@ -13,8 +13,8 @@ function App() {
       <Route path="/" element={<Navigate to={"/home"} />} />
       <Route path="*" element={<Navigate to={"/home"} />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/register" element={<SignIn />} />
-      <Route path="/login" element={<SignUp />} />
+      <Route path="/register" element={<SignUp />} />
+      <Route path="/login" element={<SignIn />} />
       <Route path="/all" element={<AllRate />} />
       <Route path="/daily" element={<DailyRate />} />
       <Route path="/quest" element={<Question />} />

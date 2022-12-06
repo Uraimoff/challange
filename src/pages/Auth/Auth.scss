@@ -1,4 +1,6 @@
 .auth {
+  height: 600px;
+  padding: 20px 0;
   background-image: linear-gradient(
     to right top,
     #61d9de,
@@ -14,5 +16,56 @@
     #d349f6,
     #e739f5
   );
- 
+  .title {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+  }
+  form {
+    width: 400px;
+    // width: fit-content;
+    background-color: white;
+    border: 1px solid white;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    button {
+      width: 100%;
+      margin: 0;
+      height: 40px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-image: linear-gradient(
+        to right,
+        #61d9de,
+        #00cbea,
+        #00bbf7,
+        #00a8ff,
+        #1391ff,
+        #5185ff,
+        #7876fa,
+        #9a63ef,
+        #ad5df3,
+        #c055f5,
+        #d349f6,
+        #e739f5
+      );
+    }
+
+    label, input::placeholder {
+      font-family: "Montserrat";
+    }
+
+    .link-text{
+      margin: 30px 0;
+      font-family:"Montserrat" ;
+      a{
+        margin-left: 10px;
+      }
+    }
+  }
 }
