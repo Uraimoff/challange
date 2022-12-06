@@ -4,6 +4,8 @@ import "./Auth.scss";
 import { NavLink } from "react-router-dom";
 export default function SignIn() {
   const onFinish = (values) => {
+    localStorage.setItem("token", "qwe123");
+    window.location.reload()
     console.log("Success:", values);
   };
 
@@ -52,9 +54,7 @@ export default function SignIn() {
           <Input.Password placeholder="Enter your password..." />
         </Form.Item>
 
-        <Checkbox style={
-          {marginBottom: "20px"}
-        }>Remember me</Checkbox>
+        <Checkbox style={{ marginBottom: "20px" }}>Remember me</Checkbox>
 
         <Button type="primary" htmlType="submit">
           Login

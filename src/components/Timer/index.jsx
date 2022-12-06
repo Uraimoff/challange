@@ -32,11 +32,11 @@ const Timer = () => {
   });
   return (
     <div className="timer-container">
-      <p>{timeHours}</p>
+      <p>{timeHours < 10 ? "0" + timeHours : timeHours}</p>
       <p>:</p>
-      <p>{timerMinutes}</p>
+      <p>{timerMinutes < 10 ? "0" + timerMinutes : timerMinutes}</p>
       <p>:</p>
-      <p>{timerSeconds}</p>
+      <p>{timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}</p>
     </div>
   );
 };

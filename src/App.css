@@ -4,9 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: "Motserrat", sans-serif;
+  text-decoration: none;
 }
 
 .GlobaWrapper {
   width: 1440px;
   margin: auto;
+}
+::-webkit-scrollbar {
+  display: none;
 }
