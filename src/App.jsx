@@ -1,12 +1,17 @@
-import { useState } from "react";
 import "./App.css";
+import {Routes, Route} from 'react-router-dom'
+import { navbar } from "./utils/navbar";
 
 function App() {
 
   return (
-    <div className="App">
-     
-    </div>
+    <Routes>
+      {
+        navbar.map((value)=>(
+          <Route path={value.path} element={value.element} />
+        ))
+      }
+    </Routes>
   );
 }
 
