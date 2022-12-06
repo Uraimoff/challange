@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Question from "./pages/Question";
 import DailyRate from "./pages/DailyRate";
 import AllRate from "./pages/AllRate";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
