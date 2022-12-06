@@ -2,16 +2,12 @@ import React, { useState } from "react";
 import { Button, Input, message, Statistic } from "antd";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
-
+import Timer from "../../components/Timer";
 const { Countdown } = Statistic;
-const deadline = Date.now() + 1000 * 60 * 60 * 24 + 1000;
 
 const Question = () => {
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
-  const onFinish = () => {
-    console.log("finished!");
-  };
   const onChangeFile = (e) => {
     message.success("Muvofiqiyatli yuklandi!");
     setDisabled(false);
@@ -27,11 +23,7 @@ const Question = () => {
   return (
     <section className="GlobaWrapper question-container">
       <h3>Birinchi kun savolining tugash vaqti!</h3>
-      <Countdown
-        value={deadline}
-        onFinish={onFinish}
-        style={{ fontSize: "100px" }}
-      />
+      <Timer />
       <div className="question-title">
         <h3>1-SAVOL</h3>
         <p>
