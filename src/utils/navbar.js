@@ -2,7 +2,7 @@ import AllRate from "../pages/AllRate";
 import DailyRate from "../pages/DailyRate";
 import Home from "../pages/Home";
 import Question from "../pages/Question";
-import Registration from "../pages/Registration";
+import Registration from "../pages/Auth";
 
 const navbar = [
   {
