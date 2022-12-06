@@ -8,3 +8,7 @@
 body {
   font-family: 'Motserrat', sans-serif;
 }
+.GlobaWrapper{
+  width: 1440px;
+  margin: auto;
+}
