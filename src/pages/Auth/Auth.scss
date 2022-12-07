@@ -1,6 +1,5 @@
 .auth {
-  height: 600px;
-  padding: 20px 0;
+  height: 100vh;
   background-image: linear-gradient(
     to right top,
     #61d9de,
@@ -22,6 +21,7 @@
     font-weight: 500;
     font-family: "Montserrat";
     margin-bottom: 20px;
+    padding-top: 70px;
   }
   form {
     width: 400px;

@@ -1,17 +1,40 @@
 .question-container {
     text-align: center;
-    margin-top: 50px;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top,
+        #61d9de,
+        #00cbea,
+        #00bbf7,
+        #00a8ff,
+        #1391ff,
+        #5185ff,
+        #7876fa,
+        #9a63ef,
+        #ad5df3,
+        #c055f5,
+        #d349f6,
+        #e739f5
+    );
+    .question-wrapper {
+        padding-top: 50px;
+        h3 {
+            color: #fff;
+            letter-spacing: 2px;
+        }
+    }
     .question-title {
         max-width: 900px;
         margin: 0 auto;
         h3 {
-            margin: 10px 0;
+            margin: 40px 0 10px;
         }
         p {
             padding: 20px;
-            border: 3px solid #000;
+            border: 3px solid #fff;
             border-radius: 25px;
             font-size: 18px;
+            color: #fff;
         }
     }
     .question-btns {
@@ -32,23 +55,23 @@
                 color: #fff;
             }
         }
+        button{
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
         input[type="file"] {
             outline: none;
             height: 100%;
             cursor: pointer;
-            background-color: #1677ff;
-            border: 1px solid #1677ff;
+            background-color: transparent;
+            border: 1px solid #fff;
         }
         input::-webkit-file-upload-button {
             margin: 0 500px;
             background-color: #1677ff;
             cursor: pointer;
         }
-    }
-    .ant-statistic .ant-statistic-content {
-        font-size: 50px;
-        font-weight: 800;
-        color: #1677ff;
     }
     .ant-upload-wrapper .ant-upload-list .ant-upload-list-item-container {
         display: none;

@@ -6,6 +6,8 @@ import axios from "axios";
 export default function SignIn() {
   const [form] = Form.useForm();
   const onFinish = (values) => {
+    localStorage.setItem("token", "qwe123");
+    window.location.reload()
     console.log("Success:", values);
 
     const url = "https://jsonplaceholder.typicode.com/users";
@@ -77,6 +79,7 @@ export default function SignIn() {
         >
           <Checkbox>Remember me</Checkbox>
         </Form.Item>
+        <Checkbox style={{ marginBottom: "20px" }}>Remember me</Checkbox>
 
         <Button type="primary" htmlType="submit">
           Login
