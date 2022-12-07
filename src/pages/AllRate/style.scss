@@ -33,6 +33,15 @@
         }
     }
     .timewr{
+        .time{
+            display: flex;
+            flex-direction: column;
+            h3{
+                color: white;
+                font-size: large;
+                letter-spacing: 2px;
+            }
+        }
         display: flex;
         flex-direction: column;
         align-items: center;

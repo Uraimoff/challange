@@ -27,5 +27,20 @@
             margin-top: 50px;
             text-transform: uppercase;
         }
+        .authlog{
+            display: flex;
+            gap: 100px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            button{
+                padding: 10px 20px;
+                border-radius: 10px;
+                border: none;
+                font-size: large;
+                background-color: aqua;
+                // color: white;
+            }
+        }
     }
 }
