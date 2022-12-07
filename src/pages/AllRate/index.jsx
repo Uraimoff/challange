@@ -6,12 +6,18 @@ import './style.scss'
 const AllRate = () => {
   return (
     <>
+    <div className='allRw'>
     <div className='wrapper GlobaWrapper'>
-      <h2><Timer color={"black"}/></h2>
+      <div className='timewr'>
+      {/* <div>Challangegacha</div> */}
+      <h2><Timer color={"white"}/></h2>
+      {/* <div>vaqt qoldi</div> */}
+      </div>
       <div className='table'>
       <h3>All users score</h3>
     <Tables/>
       </div>
+    </div>
     </div>
     </>
   )

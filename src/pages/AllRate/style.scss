@@ -1,6 +1,24 @@
-.wrapper{
-    width: 100%;
+.allRw{
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top,
+        #61d9de,
+        #00cbea,
+        #00bbf7,
+        #00a8ff,
+        #1391ff,
+        #5185ff,
+        #7876fa,
+        #9a63ef,
+        #ad5df3,
+        #c055f5,
+        #d349f6,
+        #e739f5
+    );
+    .wrapper{
+        width: 100%;
     max-width: 1440px;
+    
     h2{
         justify-content: center;
         display: flex;
@@ -11,6 +29,20 @@
         margin: 100px 0;
         h3{
             padding-bottom: 20px;
+            color: white ;
         }
     }
+    .timewr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div{
+            // display: none;
+            color: white;
+            font-size: large;
+            font-weight: 300;
+        }
+    }
+}
 }
