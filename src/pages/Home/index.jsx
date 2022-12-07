@@ -12,6 +12,7 @@ const Home = () => {
         <h1>some information</h1>
         <div className="authlog">
           <button onClick={()=>navigate('/register')}>Register</button>
+          or
           <button onClick={()=>navigate('/login')}>Login</button>
         </div>
       </div>

@@ -29,10 +29,12 @@
         }
         .authlog{
             display: flex;
-            gap: 100px;
+            gap: 50px;
             align-items: center;
             justify-content: center;
             margin-top: 100px;
+            color: white;
+            font-size: large;
             button{
                 padding: 10px 20px;
                 border-radius: 10px;
