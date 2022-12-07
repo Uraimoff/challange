@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Select, Table } from "antd";
 
 const Tables = () => {
     const columns = [
@@ -9,7 +9,22 @@ const Tables = () => {
           width: '30%',
         },
         {
-          title: 'Daily',
+          title: <Select siza={"large"}
+          bordered={false}
+          name=""
+          id=""
+          value={"Kunni tanlang"}>
+            <Select.Option value="">1</Select.Option>
+            <Select.Option value="">2</Select.Option>
+            <Select.Option value="">3</Select.Option>
+            <Select.Option value="">4</Select.Option>
+            <Select.Option value="">5</Select.Option>
+            <Select.Option value="">6</Select.Option>
+            <Select.Option value="">7</Select.Option>
+            <Select.Option value="">8</Select.Option>
+            <Select.Option value="">9</Select.Option>
+            <Select.Option value="">10</Select.Option>
+          </Select>,
           dataIndex: 'age',
           sorter: (a, b) => a.age - b.age,
         },

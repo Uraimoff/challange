@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./index.scss";
-const Timer = () => {
+const Timer = ({color}) => {
   const [timeHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSeconds, setTimerSeconds] = useState();
@@ -32,11 +32,11 @@ const Timer = () => {
   });
   return (
     <div className="timer-container">
-      <p>{timeHours < 10 ? "0" + timeHours : timeHours}</p>
-      <p>:</p>
-      <p>{timerMinutes < 10 ? "0" + timerMinutes : timerMinutes}</p>
-      <p>:</p>
-      <p>{timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}</p>
+      <p style={{color: color}} >{timeHours < 10 ? "0" + timeHours : timeHours}</p>
+      <p style={{color: color}} >:</p>
+      <p style={{color: color}} >{timerMinutes < 10 ? "0" + timerMinutes : timerMinutes}</p>
+      <p style={{color: color}} >:</p>
+      <p style={{color: color}} >{timerSeconds < 10 ? "0" + timerSeconds : timerSeconds}</p>
     </div>
   );
 };
