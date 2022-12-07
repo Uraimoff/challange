@@ -7,7 +7,7 @@ export default function SignIn() {
   const [form] = Form.useForm();
   const onFinish = (values) => {
     localStorage.setItem("token", "qwe123");
-    window.location.reload()
+    window.location.reload();
     console.log("Success:", values);
 
     const url = "https://jsonplaceholder.typicode.com/users";
@@ -67,17 +67,6 @@ export default function SignIn() {
           ]}
         >
           <Input.Password placeholder="Enter your password..." />
-        </Form.Item>
-
-        <Form.Item
-          name="remember"
-          valuePropName="checked"
-          wrapperCol={{
-            offset: 0,
-            span: 0,
-          }}
-        >
-          <Checkbox>Remember me</Checkbox>
         </Form.Item>
         <Checkbox style={{ marginBottom: "20px" }}>Remember me</Checkbox>
 
