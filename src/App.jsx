@@ -12,11 +12,11 @@ import Admin from "./pages/Admin";
 function App() {
   const token = localStorage.getItem("token");
   const email = localStorage.getItem("email");
-  const emaill = email.includes("qwerty1@com.uz") ? email.includes("qwerty1@com.uz") : false;
-  console.log(emaill, "bu email");
+  // const emaill = email.includes("qwerty1@com.uz") ? email.includes("qwerty1@com.uz") : email === null ? false : false;
+  // console.log(emaill, "bu email");
   return (
     <>
-      {token === null && emaill === null ? (
+      {token === null && email === null  ? (
         <Routes>
           <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="*" element={<Navigate to={"/home"} />} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<SignIn />} />
         </Routes>
-      ) : token !== null && emaill === null ? (
+      ) : token !== null && email !== "qwerty1@com.uz" ? (
         <Layout>
           <Routes>
             <Route path="/" element={<Navigate to={"/home"} />} />
@@ -35,18 +35,23 @@ function App() {
             <Route path="/quest" element={<Question />} />
           </Routes>
         </Layout>
-      ) : token !== null && emaill && emaill !== null ? (
+      )
+      : email !== null && email === "qwerty1@com.uz" ? (
         <Layout>
           <Routes>
             <Route path="/" element={<Navigate to={"/admin"} />} />
-            <Route path="*" element={<h1>404 Not found</h1>} />
-            <Route path="/admin" element={<Admin />} />
-            {/* <Route path="/all" element={<AllRate />} />
-            <Route path="/daily" element={<DailyRate />} />
-            <Route path="/quest" element={<Question />} /> */}
+            <Route path="*" element={<Navigate to={"/admin"} />} />
+          <Route path="/admin" element={<Admin />} />
           </Routes>
         </Layout>
-      ) : null}
+      ) : <Routes>
+      <Route path="/" element={<Navigate to={"/home"} />} />
+      <Route path="*" element={<Navigate to={"/home"} />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/register" element={<SignUp />} />
+      <Route path="/login" element={<SignIn />} />
+    </Routes>
+      }
     </>
   );
 }
