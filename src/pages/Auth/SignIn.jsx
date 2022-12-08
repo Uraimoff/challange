@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Checkbox, Form, Input, message } from "antd";
 import "./Auth.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 export default function SignIn() {
   const [form] = Form.useForm();
@@ -9,12 +9,13 @@ export default function SignIn() {
     localStorage.setItem("token", "qwe123");
     window.location.reload();
     console.log("Success:", values);
-
+    const navigate = useNavigate()
     const url = "https://jsonplaceholder.typicode.com/users";
     axios
       .post(url, values)
       .then(function (response) {
         message.success("You have successfully registered!");
+        navigate('/home')
         setTimeout(() => {
           form.resetFields();
           setInitialValue({ remember: false });
