@@ -7,20 +7,22 @@ import "./App.css";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import Layout from "./components/Layout";
+import Admin from "./pages/Admin";
 
 function App() {
   const token = localStorage.getItem("token");
+  const email = localStorage.getItem("email");
   return (
     <>
-      {token === null ? (
+      {token === null && email === null  ? (
         <Routes>
           <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="*" element={<Navigate to={"/home"} />} />
-          <Route path="/home" element={<Home  />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<SignIn />} />
         </Routes>
-      ) : (
+      ) : token !== null && email !== "qwerty1@com.uz" ? (
         <Layout>
           <Routes>
             <Route path="/" element={<Navigate to={"/home"} />} />
@@ -31,7 +33,23 @@ function App() {
             <Route path="/quest" element={<Question />} />
           </Routes>
         </Layout>
-      )}
+      )
+      : email !== null && email === "qwerty1@com.uz" ? (
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Navigate to={"/admin"} />} />
+            <Route path="*" element={<Navigate to={"/admin"} />} />
+          <Route path="/admin" element={<Admin />} />
+          </Routes>
+        </Layout>
+      ) : <Routes>
+      <Route path="/" element={<Navigate to={"/home"} />} />
+      <Route path="*" element={<Navigate to={"/home"} />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/register" element={<SignUp />} />
+      <Route path="/login" element={<SignIn />} />
+    </Routes>
+      }
     </>
   );
 }

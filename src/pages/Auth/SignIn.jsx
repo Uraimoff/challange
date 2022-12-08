@@ -3,13 +3,23 @@ import { Button, Checkbox, Form, Input, message } from "antd";
 import "./Auth.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
+
 export default function SignIn() {
   const [form] = Form.useForm();
+  const navigate = useNavigate()
+  const [body, setBody] = useState([])
+
+  const onChange =({ target: { value, item } }) => {
+    setBody({
+        ...body,
+        [item]: value,
+    });
+};
   const onFinish = (values) => {
-    localStorage.setItem("token", "qwe123");
+    localStorage.setItem("token", 'asdas');
+    localStorage.setItem("email", body.undefined);
     window.location.reload();
     console.log("Success:", values);
-    const navigate = useNavigate()
     const url = "https://jsonplaceholder.typicode.com/users";
     axios
       .post(url, values)
@@ -25,6 +35,7 @@ export default function SignIn() {
         message.error(error.message);
       });
   };
+
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -46,6 +57,8 @@ export default function SignIn() {
       >
         <Form.Item
           label="Email"
+          onChange={onChange}
+          item="email"
           name="email"
           rules={[
             {
