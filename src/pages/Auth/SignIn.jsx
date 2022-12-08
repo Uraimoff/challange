@@ -15,7 +15,6 @@ export default function SignIn() {
         [item]: value,
     });
 };
-console.log(body.undefined, "bu signup email admin");
   const onFinish = (values) => {
     localStorage.setItem("token", 'asdas');
     localStorage.setItem("email", body.undefined);

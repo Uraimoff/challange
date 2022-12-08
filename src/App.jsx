@@ -12,8 +12,6 @@ import Admin from "./pages/Admin";
 function App() {
   const token = localStorage.getItem("token");
   const email = localStorage.getItem("email");
-  // const emaill = email.includes("qwerty1@com.uz") ? email.includes("qwerty1@com.uz") : email === null ? false : false;
-  // console.log(emaill, "bu email");
   return (
     <>
       {token === null && email === null  ? (
